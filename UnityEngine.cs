@@ -9,9 +9,15 @@ namespace UnityEngine
 {
     public static class Debug
     {
+        public static bool print = false;
+        // if this is false, it will still print errors, as those are important.
+        // don't disable errors.
         public static void Log(object log)
         {
-            Console.WriteLine("[FakeUnity] " + log.ToString());
+            if (print == false)
+            {
+                Console.WriteLine("[FakeUnity] " + log.ToString());
+            }
         }
 
         public static void LogError(string log)
