@@ -14,7 +14,7 @@ namespace UnityEngine
         // don't disable errors.
         public static void Log(object log)
         {
-            if (print == false)
+            if (print == true)
             {
                 Console.WriteLine("[FakeUnity] " + log.ToString());
             }
